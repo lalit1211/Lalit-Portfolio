@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
+/* @import url('./mobile.css'); */
 
 *{
     margin: 0;
@@ -72,16 +73,18 @@ header p{
     font-family: montserrat;
 }
 .home{
+    height: 100vh;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
     padding-top: 6rem;
-    height: 100vh;
-    width: 100%;
     position: relative;
     color: whitesmoke;
     align-items: center;
     border-bottom: 1px solid #111418;
+    overflow: hidden;
 }
 .home1{
     width: 55%;
@@ -100,12 +103,21 @@ header p{
     bottom: 20px;
     right: 70px;
     text-align: center;
-    background-image: url(./log.jpeg);
+    /* background-image: url(./log.jpeg); */
     opacity: 0.6;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    transition: all .4s ease-in-out;
+    overflow: hidden;
+}
+.home-image{
+    width: 100%;
+    height: 100%;
+    background-image: url(./log.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: all .4s ease-in-out;
 }
 .home2:hover{
     opacity: 1;
@@ -125,7 +137,7 @@ span{
 .home-description{
     color: whitesmoke;
 }
-.home> .home1:nth-child(n){
+.home1:nth-child(n){
     font-weight: 600;
     letter-spacing: 0.01rem;
 }
@@ -177,6 +189,7 @@ span{
 }
 .portfolio-item{
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     column-gap: 2%;
     margin: 4rem auto;
@@ -349,6 +362,12 @@ span{
     border-radius: 5px;
     background: linear-gradient(145deg,#EE287C, #C91904);
 }
+.button{
+    width: 15%;
+    margin-top: 2rem;
+    right: 5.5rem;
+    position: absolute;
+}
 
 
 /* //`========= contact section========== */
@@ -377,6 +396,7 @@ span{
 .contact-content{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 4rem;
     justify-content: space-between;
 }
@@ -499,7 +519,9 @@ form{
 .group4{
     width: 30%;
     margin: 1.5rem auto;
+
 }
+
 .btn{
     background: linear-gradient(145deg,#1e2024,#23272b);
     height: 3rem;
@@ -522,20 +544,22 @@ form{
 /* //.=============footer section============= */
 footer{
     width: 100%;
-    height: 1rem;
     color: #e4e6ea;
     text-align: center;
     border-top: 1px solid black;
 }
 .footer-wrapper{
-    width: 16%;
-    margin: 0 auto;
-    margin-top: 2rem;
+    width: 17%;
+    height: 4rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    /* margin-top: 1rem; */
+    border-radius: 6px;
     color: white;
     display: flex;
     text-align: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .footer-wrapper img{
     height: 3rem;
@@ -550,9 +574,15 @@ footer{
     margin: 0 auto;
     font-size: 1.2rem;
 }
-.footer-wrapper h1:hover{
+.footer-wrapper:hover h1{
     color: #ff014f;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 0px 0px 2px #a59e9eb0;
+}
+.footer-wrapper:hover img{
+    box-shadow: 0px 0px 5px #ff014f;
+}
+.footer-wrapper:hover{
+    box-shadow: 0px 0px 5px -2px #a59e9eb0;
 }
 .shortcut{
     position: fixed;
