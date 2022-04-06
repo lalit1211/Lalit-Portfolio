@@ -58,7 +58,8 @@ span{
     .resume-content{
         flex-wrap: wrap;
         height: 205vh;
-        flex-direction: column;
+        display: flex;
+        /* flex-direction: column; */
     }
     .resume-education{
         width: 100%;
